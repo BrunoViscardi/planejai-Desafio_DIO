@@ -2,7 +2,7 @@ import { Clock, TrendingUp, Wallet, Moon, Sun } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "./Button";
-import { Divider } from "./divider";
+import { Divider } from "./Divider";
 import { useTheme } from "../../hooks/useTheme";
 
 export function Header() {
