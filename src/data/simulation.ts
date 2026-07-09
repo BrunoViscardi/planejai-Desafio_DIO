@@ -7,7 +7,7 @@ import {
   Wallet,
 } from 'lucide-react'
 
-import type {InsightData} from '../services/aiservices'
+import type {InsightData} from '../services/aiServices'
 import type { FormStepProps } from '../components/features/Simulation/FormStep'
 
 export const simulationFormSteps = [
