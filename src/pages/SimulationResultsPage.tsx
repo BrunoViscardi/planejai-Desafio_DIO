@@ -9,7 +9,7 @@ import {
 
 import { useParams } from "react-router-dom";
 
-import { AIInsightsCard } from "../components/features/SimulationResults/AIInsightsProps";
+import { AIInsightsCard } from "../components/features/SimulationResults/AIInsightsCardProps";
 import { Card } from "../components/features/SimulationResults/Card";
 import { PageHero } from "../components/shared/PageHero";
 import { useSimulationStorage } from "../hooks/useSimulationStorage";
