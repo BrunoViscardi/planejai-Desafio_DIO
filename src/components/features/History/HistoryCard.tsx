@@ -1,6 +1,7 @@
 import { Goal, Trash2, ExternalLink } from "lucide-react";
 import { Divider } from "../../shared/Divider";
 import { Button } from "../../shared/Button";
+import { useNavigate } from "react-router-dom";
 
 interface CardProps {
   id: string;
@@ -27,6 +28,7 @@ export function Card({
     label: "text-muted-foreground text-xs leading-relaxed font-semibold",
     value: "text-foreground text-base leading-relaxed font-semibold",
   };
+  const navigate = useNavigate();
 
   return (
     <div
@@ -69,7 +71,12 @@ export function Card({
           onClick={() => onDelete(id)}
         ></Button>
 
-        <Button type="button" icon={ExternalLink} variant="secondary">
+        <Button
+          type="button"
+          onClick={() => navigate(`/resultado/${id}`)}
+          icon={ExternalLink}
+          variant="secondary"
+        >
           Ver detalhes
         </Button>
       </div>
