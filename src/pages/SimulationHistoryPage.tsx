@@ -1,6 +1,7 @@
 import { Card } from "../components/features/History/HistoryCard";
 import { PageHero } from "../components/shared/PageHero";
 import { useSimulationStorage } from "../hooks/useSimulationStorage";
+import { calcMonthlySavings } from "../utils/simulation";
 
 export function SimulationHistoryPage() {
   const { getFormData } = useSimulationStorage();
@@ -23,7 +24,7 @@ export function SimulationHistoryPage() {
               createdAt={new Date(item.createdAt).toLocaleDateString("pt-BR")}
               goalAmount={`R$ ${item.goalAmount}`}
               goalDeadline={`${item.goalDeadline} meses`}
-              monthlySavings={`R$ ${item.monthlySavings}`}
+              monthlySavings={`R$ ${calcMonthlySavings(item).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
             />
           </div>
         ))
