@@ -58,5 +58,5 @@ export const useSimulationStorage = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated));
   };
 
-  return { saveFormData, getFormData, getFormDataById, updateSimulation };
+  return { saveFormData, getFormDataById, getFormData, updateSimulation };
 };

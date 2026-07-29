@@ -7,10 +7,10 @@ import { getInsight, type InsightData } from "../services/aiServices";
 
 export const useInsight = (id: string) => {
   const isRequestPending = useRef(false);
-  const { getFormData, updateSimulation } = useSimulationStorage();
+  const { getFormDataById, updateSimulation } = useSimulationStorage();
 
   const [insight, setInsight] = useState<InsightData | null>(() => {
-    const simulation = getFormData(id);
+    const simulation = getFormDataById(id);
 
     if (simulation?.insight) {
       return simulation.insight;
@@ -26,7 +26,7 @@ export const useInsight = (id: string) => {
   // Como array de dependências do useEffect
   const fetchInsight = useCallback(
     async (simulationId: string) => {
-      const simulation = getFormData(simulationId);
+      const simulation = getFormDataById(simulationId);
 
       if (!simulation) {
         setError("Simulação não encontrada.");
@@ -53,7 +53,7 @@ export const useInsight = (id: string) => {
         setIsLoading(false);
       }
     },
-    [getFormData, updateSimulation],
+    [getFormDataById, updateSimulation],
   );
 
   useEffect(() => {
