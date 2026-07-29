@@ -31,7 +31,7 @@ export function SimulationHistoryPage() {
               goalName={item.goalName}
               createdAt={new Date(item.createdAt).toLocaleDateString("pt-BR")}
               goalAmount={`R$ ${item.goalAmount}`}
-              goalDeadline={`${item.goalDeadline} meses`}
+              goalDeadline={`${item.goalDeadline} ${item.goalDeadline === "1" ? "mês" : "meses"}`}
               monthlySavings={`R$ ${calcMonthlySavings(item).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
               onDelete={handleDelete}
             />
