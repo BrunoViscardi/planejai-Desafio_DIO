@@ -19,9 +19,9 @@ export function SimulationHistoryPage() {
         />
 
         <Card
-          goalName="Meta de Compras no Carrefour"
+          goalName="Meta de compra no Carrefour"
           goalDate="01/01/2023"
-          goalAmount="R$ 1.000,00"
+          goalAmount="R$ 100.000.000,00"
           goalDeadline="31/12/2023"
           monthlySavings="R$ 83,33"
         />

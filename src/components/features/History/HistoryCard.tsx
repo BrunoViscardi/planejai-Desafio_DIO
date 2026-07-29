@@ -27,45 +27,47 @@ export function Card({
   return (
     <div
       className={
-        "m-3 flex items-center w-full justify-between  rounded-2xl p-6 shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)]"
+        "mb-6 flex items-center w-full justify-between  rounded-2xl p-6  shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)]"
       }
     >
       <div className="flex h-10 w-10  shrink-0 items-center justify-center rounded-[10.67px] bg-[#ECE5F8]">
         <Goal size={28} className="text-primary" />
       </div>
 
-      <div>
+      <div className="w-[210px]">
         <span className={styleClasses.goalName}>{goalName}</span>
         <p className={styleClasses.goalDate}>{goalDate}</p>
       </div>
 
-      <div>
+      <div className="w-[150px]">
         <span className={styleClasses.label}>Custo da Meta</span>
         <p className={styleClasses.value}>{goalAmount}</p>
       </div>
 
-      <div>
+      <div className="w-[150px]">
         <span className={styleClasses.label}>Prazo</span>
         <p className={styleClasses.value}>{goalDeadline}</p>
       </div>
 
-      <div>
+      <div className="w-[150px]">
         <span className={styleClasses.label}>Economia Mensal</span>
         <p className={styleClasses.value}>{monthlySavings}</p>
       </div>
 
-      <Divider orientation="vertical" />
+      <div className="flex items-center gap-2">
+        <Divider orientation="vertical" />
 
-      <Button
-        type="button"
-        icon={Trash2}
-        className="text-red-500"
-        variant="ghost"
-      ></Button>
+        <Button
+          type="button"
+          icon={Trash2}
+          className="text-red-500"
+          variant="ghost"
+        ></Button>
 
-      <Button type="button" icon={ExternalLink} variant="secondary">
-        Ver detalhes
-      </Button>
+        <Button type="button" icon={ExternalLink} variant="secondary">
+          Ver detalhes
+        </Button>
+      </div>
     </div>
   );
 }
