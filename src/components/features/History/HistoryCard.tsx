@@ -3,19 +3,23 @@ import { Divider } from "../../shared/Divider";
 import { Button } from "../../shared/Button";
 
 interface CardProps {
+  id: string;
   goalName: string;
   createdAt: string;
   goalAmount: string;
   goalDeadline: string;
   monthlySavings: string;
+  onDelete: (id: string) => void;
 }
 
 export function Card({
+  id,
   goalName,
   createdAt,
   goalAmount,
   goalDeadline,
   monthlySavings,
+  onDelete,
 }: CardProps) {
   const styleClasses = {
     goalName: "text-foreground text-base leading-relaxed font-semibold",
@@ -62,6 +66,7 @@ export function Card({
           icon={Trash2}
           className="text-red-500"
           variant="ghost"
+          onClick={() => onDelete(id)}
         ></Button>
 
         <Button type="button" icon={ExternalLink} variant="secondary">
