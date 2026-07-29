@@ -20,7 +20,7 @@ export function SimulationHistoryPage() {
           <div key={index}>
             <Card
               goalName={item.goalName}
-              goalDate={item.goalDate}
+              createdAt={new Date(item.createdAt).toLocaleDateString("pt-BR")}
               goalAmount={`R$ ${item.goalAmount}`}
               goalDeadline={`${item.goalDeadline} meses`}
               monthlySavings={`R$ ${item.monthlySavings}`}

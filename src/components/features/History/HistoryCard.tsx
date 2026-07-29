@@ -4,7 +4,7 @@ import { Button } from "../../shared/Button";
 
 interface CardProps {
   goalName: string;
-  goalDate: string;
+  createdAt: string;
   goalAmount: string;
   goalDeadline: string;
   monthlySavings: string;
@@ -12,14 +12,14 @@ interface CardProps {
 
 export function Card({
   goalName,
-  goalDate,
+  createdAt,
   goalAmount,
   goalDeadline,
   monthlySavings,
 }: CardProps) {
   const styleClasses = {
     goalName: "text-foreground text-base leading-relaxed font-semibold",
-    goalDate: "text-muted-foreground leading-relaxed text-sm",
+    createdAt: "text-muted-foreground leading-relaxed text-sm",
     label: "text-muted-foreground text-xs leading-relaxed font-semibold",
     value: "text-foreground text-base leading-relaxed font-semibold",
   };
@@ -36,7 +36,7 @@ export function Card({
 
       <div className="w-[210px]">
         <span className={styleClasses.goalName}>{goalName}</span>
-        <p className={styleClasses.goalDate}>{goalDate}</p>
+        <p className={styleClasses.createdAt}>{createdAt}</p>
       </div>
 
       <div className="w-[150px]">
