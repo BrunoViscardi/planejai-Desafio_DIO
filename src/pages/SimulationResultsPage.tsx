@@ -10,15 +10,15 @@ import {
 import { useParams } from "react-router-dom";
 
 import { AIInsightsCard } from "../components/features/SimulationResults/AIInsightsCardProps";
-import { Card } from "../components/features/SimulationResults/Card";
+import { Card } from "../components/features/SimulationResults/SummaryCard";
 import { PageHero } from "../components/shared/PageHero";
 import { useSimulationStorage } from "../hooks/useSimulationStorage";
 import { calcMonthlySavings } from "../utils/simulation";
 
 export function SimulationResultsPage() {
   const { id } = useParams<{ id: string }>();
-  const { getFormData } = useSimulationStorage();
-  const data = id ? getFormData(id) : null;
+  const { getFormDataById } = useSimulationStorage();
+  const data = id ? getFormDataById(id) : null;
 
   if (!data) {
     return <p>Simulação não encontrada</p>;
