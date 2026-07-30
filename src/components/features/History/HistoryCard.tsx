@@ -33,7 +33,7 @@ export function Card({
   return (
     <div
       className={
-        "mb-6 flex items-center w-full justify-between  rounded-2xl p-6  shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)]"
+        "bg-card mb-6 flex items-center w-full justify-between  rounded-2xl p-6  shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)]"
       }
     >
       <div className="flex h-10 w-10  shrink-0 items-center justify-center rounded-[10.67px] bg-[#ECE5F8]">
