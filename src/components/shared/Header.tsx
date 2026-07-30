@@ -13,7 +13,7 @@ export function Header() {
     <header className="border-b border-(--border) px-6 py-3">
       <nav className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mr-6">
           <div className="bg-primary flex h-9 w-9 items-center justify-center rounded-full">
             <Wallet size={20} className="text-primary-foreground" />
           </div>
@@ -39,7 +39,7 @@ export function Header() {
           >
             <span className="hidden sm:inline">Histórico</span>
           </Button>
-          <Divider orientation="vertical" />
+          <Divider orientation="vertical" spacing={2} />
           <Button
             aria-label={`Mudar para tema ${theme === "light" ? "escuro" : "claro"}`}
             variant="ghost"
